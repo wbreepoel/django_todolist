@@ -20,7 +20,8 @@ from register import views as v
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("main.urls")), 
-    path('register/', v.register, name='register'), 
+    path('register/', v.register, name='register'),
+     path('', include('django.contrib.auth.urls')),  
 # So if we don't type admin/, whatever the path is given is going to be passed over to the urls.py file in the main folder
 ]
 
