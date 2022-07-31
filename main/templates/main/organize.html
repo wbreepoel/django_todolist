@@ -1,0 +1,11 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+
+<form action="/organize/", method="POST">
+    {% csrf_token %}
+    {{form.as_ul}}
+    <button type="submit" name="save">Organize new</button>
+</form>
+
+{% endblock content %}
